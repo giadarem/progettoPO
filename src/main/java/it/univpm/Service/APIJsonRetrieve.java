@@ -29,7 +29,7 @@ public class APIJsonRetrieve {
         }
         
         if (!type.equals("recent") && !type.equals("popular") && !type.equals("mixed")) type = "recent";
-        if (Integer.parseInt(count) <= 0) count = String.valueOf(15);
+        if (Integer.parseInt(count) <= 0|| Integer.parseInt(count) >= 100 ) count = String.valueOf(15);
         if (!lang.equals("it") && !lang.equals("en") && !lang.equals("fr") && !lang.equals("es")) lang = "it";
 
         String url = "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/user/1.1/search/tweets.json?geocode=" + geolocation + "&result_type=" + type + "&count=" + count + "&lang=" + lang;
@@ -55,7 +55,7 @@ public class APIJsonRetrieve {
             }
             scanner.close();
 
-            //Conversione in JSON OBJ
+            //Conversione in un ARRAY di JSON OBJ
             JSONArray arrayObject = new ServiceRetrieve().getArrayJSON(String.valueOf(streamStr), "statuses");
             return arrayObject;
         }

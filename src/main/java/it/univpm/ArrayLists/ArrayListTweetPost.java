@@ -9,7 +9,8 @@ import java.util.*;
 public class ArrayListTweetPost {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArrayListTweetPost.class);
     private ArrayList<TweetPost> tweet;
-
+    
+    
     public ArrayListTweetPost() {
         this.tweet = new ArrayList<>();
     }
@@ -18,6 +19,7 @@ public class ArrayListTweetPost {
         tweet.add(tp);
     }
 
+    
     public TweetPost getElementByID(int index) {
         return tweet.get(index);
     }

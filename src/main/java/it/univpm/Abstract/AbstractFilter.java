@@ -1,8 +1,6 @@
 package it.univpm.Abstract;
 
 import it.univpm.ArrayLists.ArrayListTweetPost;
-import org.json.*;
-import java.util.ArrayList;
 import it.univpm.Model.TweetPost;
 
 public abstract class AbstractFilter {

@@ -2,7 +2,6 @@ package it.univpm.Service;
 
 import it.univpm.ArrayLists.ArrayListTweetPost;
 import it.univpm.Filter.SearchFilter;
-import org.json.JSONArray;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;

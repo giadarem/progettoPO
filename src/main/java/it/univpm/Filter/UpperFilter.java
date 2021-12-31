@@ -1,15 +1,13 @@
 package it.univpm.Filter;
 
-import java.util.ArrayList;
 import it.univpm.Abstract.AbstractFilter;
 import it.univpm.ArrayLists.ArrayListTweetPost;
 import it.univpm.Model.TweetPost;
-import org.json.JSONException;
 
-public class SearchFilter extends AbstractFilter{
+public class UpperFilter extends AbstractFilter {
     private String search_value = "";
 
-    public SearchFilter(String search_field, String search_value){
+    public UpperFilter(String search_field, String search_value){
         super(search_field);
         this.setSearch_value(search_value);
     }
@@ -27,23 +25,8 @@ public class SearchFilter extends AbstractFilter{
         boolean check = false;
         switch(getFields())
         {
-            case "hashtags":
-                String[] str_hashtags = elem.getPost_hashtags();
-                for(int i = 0; i < str_hashtags.length; i++)
-                {
-                    if(str_hashtags[i].contains(this.getSearch_value())){ check = true; }
-                }
-                break;
-            case "username":
-                if(elem.getUser_name().contains(this.getSearch_value()))
-                    check = true;
-                break;
-            case "mentions":
-                String[] str = elem.getUser_post_mentions();
-                for(int i = 0; i < str.length; i++)
-                {
-                    if(str[i].contains(this.getSearch_value())){ check = true; }
-                }
+            case "post_num":
+                if(Integer.parseInt(elem.getUser_post_num()) >= Integer.parseInt(this.getSearch_value())) check = true;
                 break;
         }
         return check;

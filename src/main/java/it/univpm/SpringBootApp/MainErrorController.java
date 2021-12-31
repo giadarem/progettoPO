@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
-import java.lang.constant.Constable;
-import java.util.Collection;
-import java.util.Map;
 
 @Controller
 public class MainErrorController implements ErrorController{
@@ -34,7 +31,7 @@ public class MainErrorController implements ErrorController{
                 errorPage = "error/404";
                 LOGGER.error("Error 404");
             }else if(statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()){
-                pageTitle = "Internal Server Error";
+                pageTitle = "internal server error ";
                 errorPage = "error/500";
                 LOGGER.error("Error 500");
             }else if(statusCode == HttpStatus.FORBIDDEN.value()){

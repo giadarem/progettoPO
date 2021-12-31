@@ -2,7 +2,8 @@ package it.univpm.SpringBootApp;
 
 import it.univpm.Service.ServiceFilter;
 import it.univpm.Service.ServiceRetrieve;
-import org.json.JSONObject;
+import it.univpm.Service.StatisticService;
+import it.univpm.Statistics.*;
 import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,8 +57,8 @@ public class MainRestController {
     }
 
     @GetMapping("/statistics")
-    public ResponseEntity statistics(@RequestParam(name="q", required = false, defaultValue = "num") String statistic)
-    {
-        return null;
-    }
-}
+    public ResponseEntity statistics(@RequestParam(name="statistic", required = false, defaultValue = "30") String statistic) throws IOException, ParseException {
+    { LOGGER.info("*** CALLED PATH [\"STATISTIC1\"] ***");
+        return new ResponseEntity<String>(new StatisticService().statistic(statistic), HttpStatus.OK);
+    }}
+  }

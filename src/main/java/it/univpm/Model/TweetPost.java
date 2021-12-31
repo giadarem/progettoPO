@@ -1,5 +1,6 @@
 package it.univpm.Model;
 
+//per i tweet normali 
 public class TweetPost {
     private String post_date;
     private String post_id;
