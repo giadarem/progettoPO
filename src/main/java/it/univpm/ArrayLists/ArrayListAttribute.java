@@ -16,7 +16,6 @@ public class ArrayListAttribute {
     }
 
     public void addElement(Attribute at){this.attributes.add(at);}
-    
     public String getAll(){
         String str = "{\"attributes\":[";
 
