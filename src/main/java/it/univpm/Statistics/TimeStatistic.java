@@ -38,37 +38,3 @@ public class TimeStatistic {
     }
 	
 }
-
-	/*
-	private boolean searchElement(TweetDate elementByID) {
-		return false;
-	}	
-}
-	/*
-	private ArraylistTweet;
-	 public boolean searchElement(TweetPost elem) {
-	        switch(getFields())
-	        {
-	            case "hashtags":
-	                String[] str_hashtags = elem.getPost_hashtags();
-	                for(int i = 0; i < str_hashtags.length; i++)
-	                {
-	                    if(str_hashtags[i].contains(this.getSearch_value())){ return true; }
-	                }
-	                return false;
-	            case "username":
-	                System.out.println("ciao");
-	                if(elem.getUser_name().contains(this.getSearch_value()))
-	                    return true;
-	                return false;
-	            case "mentions":
-	                String[] str = elem.getUser_post_mentions();
-	                for(int i = 0; i < str.length; i++)
-	                {
-	                    if(str[i].contains(this.getSearch_value())){ return true; }
-	                }
-	                return false;
-	        }
-	
-}
-*/
