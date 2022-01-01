@@ -1,10 +1,8 @@
 package it.univpm.Service;
 
 import it.univpm.ArrayLists.ArrayListAttribute;
-import it.univpm.ArrayLists.ArrayListDate;
 import it.univpm.ArrayLists.ArrayListTweetPost;
 import it.univpm.Model.Attribute;
-import it.univpm.Model.TweetDate;
 import it.univpm.Model.TweetPost;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -60,14 +58,13 @@ public class ServiceRetrieve {
         return obj;
     }
 
-    //STRING - API RESPONSE PER IL GENERALE
+    //STRING - API RESPONSE
     public String getJSONResponseFromAPI(String location, String type, String count, String lang) throws IOException, ParseException {
         return action(location, type, count, lang).getAll();
     }
-    
-    //ArrayListTweetPost - API RESPONSE PER I FILTRI/STATISTICHE, STATICA IMPOSTATA SULLA CITA', PER CAMBIARE CAMBIARE STRINGA LOCATION
+    //ArrayListTweetPost - API RESPONSE
     public ArrayListTweetPost getJSONResponseFromAPI() throws IOException, ParseException {
-        String location = "Milano"; String type = "recent"; String count = "50"; String lang = "it";
+        String location = "Milano"; String type = "recent"; String count = "20"; String lang = "it";
         return action(location, type, count, lang);
     }
 
@@ -105,7 +102,7 @@ public class ServiceRetrieve {
             String[] date_split = new String[6];
             String[] time_split = new String[3];
             int hours = 0;
-            //// prva prova prova prova cambio branch
+
             //Conversione data FU GMT +0000 --> GMT +0100
             date_split = created_at.split(" ");
             time_split = date_split[3].split(":");
@@ -129,24 +126,7 @@ public class ServiceRetrieve {
         }
         return array_tweet;
     }
-    
-    
-    //ACTION PER LA STATISTICA CON LE IMPOSTAZIONI GIA DATE 
-    public ArrayListDate action() throws IOException, ParseException {
-    	String location = "Milano"; String type = "recent"; String count = "50"; String lang = "it";
-        ArrayListDate array_tweet = new ArrayListDate();
-        org.json.JSONArray arrayObject = new APIJsonRetrieve().retrieve(location, type, count, lang);
 
-        for (int post_count = 0; post_count < arrayObject.length(); post_count++) {
-            //Recupero gli elementi dell'oggetto
-            org.json.JSONObject obj_statuses = arrayObject.getJSONObject(post_count);
-            String created_at = (String) obj_statuses.get("created_at");
-            array_tweet.addElement(new TweetDate(created_at));
-        }
-        return array_tweet;
-    }
-
-    
     public String getAttributesList(){
         ArrayListAttribute attributes = new ArrayListAttribute();
 
@@ -157,8 +137,9 @@ public class ServiceRetrieve {
         attributes.addElement(new Attribute("[statuses][user] id_str", "Type: String - ID univoco dell'utente"));
         attributes.addElement(new Attribute("[statuses][user] screen_name", "Type: String - Username dell'utente"));
         attributes.addElement(new Attribute("[statuses][user] listed_count", "Type: Integer - Numero di post dell'utente"));
+        attributes.addElement(new Attribute("[statuses][user] location", "Type: String - Poszione geografica dell'utente"));
         attributes.addElement(new Attribute("[statuses][entities][hashtags] text", "Type: String[] - Hashtag testuali presenti nel Tweet"));
-        attributes.addElement(new Attribute("[statuses][entities][user_mentions]", "Type: String[] - Menzioni utenti testuali presenti nel Tweet"));
+        attributes.addElement(new Attribute("[statuses][entities][user_mentions] screen_name", "Type: String[] - Menzioni utenti testuali presenti nel Tweet"));
 
         return attributes.getAll();
     }

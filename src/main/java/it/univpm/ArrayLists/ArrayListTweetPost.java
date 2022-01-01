@@ -9,8 +9,7 @@ import java.util.*;
 public class ArrayListTweetPost {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArrayListTweetPost.class);
     private ArrayList<TweetPost> tweet;
-    
-    
+
     public ArrayListTweetPost() {
         this.tweet = new ArrayList<>();
     }
@@ -19,7 +18,6 @@ public class ArrayListTweetPost {
         tweet.add(tp);
     }
 
-    
     public TweetPost getElementByID(int index) {
         return tweet.get(index);
     }
@@ -68,7 +66,7 @@ public class ArrayListTweetPost {
             } else { if ((i+1) == this.tweet.size()) str += ",\"post_hashtags\":[]}"; else str += ",\"post_hashtags\":[]},"; }
         }
         str += "]}";
-        LOGGER.info("*** REQUEST STATUS [\"get-tweets\"] - " + HttpStatus.OK + " ***");
+        LOGGER.info("*** REQUEST STATUS - " + HttpStatus.OK + " ***");
 
         return str;
     }

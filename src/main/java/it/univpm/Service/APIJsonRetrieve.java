@@ -27,16 +27,15 @@ public class APIJsonRetrieve {
             default:
                 break;
         }
-        
         if (!type.equals("recent") && !type.equals("popular") && !type.equals("mixed")) type = "recent";
-        if (Integer.parseInt(count) <= 0|| Integer.parseInt(count) >= 100 ) count = String.valueOf(15);
+        if (Integer.parseInt(count) <= 0 || Integer.parseInt(count) > 100) count = String.valueOf(20);
         if (!lang.equals("it") && !lang.equals("en") && !lang.equals("fr") && !lang.equals("es")) lang = "it";
 
         String url = "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/user/1.1/search/tweets.json?geocode=" + geolocation + "&result_type=" + type + "&count=" + count + "&lang=" + lang;
-        // chiama il ritorno dell'url
+
         return call(url);
     }
-    //org.json chiama la libreria che non si può importare, perchè va in contrasto con json.simple
+
     private org.json.JSONArray call(String url) throws ParseException, IOException {
         URL call_url = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) call_url.openConnection();
@@ -55,7 +54,7 @@ public class APIJsonRetrieve {
             }
             scanner.close();
 
-            //Conversione in un ARRAY di JSON OBJ
+            //Conversione in JSON OBJ
             JSONArray arrayObject = new ServiceRetrieve().getArrayJSON(String.valueOf(streamStr), "statuses");
             return arrayObject;
         }
