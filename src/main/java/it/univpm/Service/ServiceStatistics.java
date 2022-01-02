@@ -9,9 +9,15 @@ import java.util.ArrayList;
 public class ServiceStatistics {
     private ArrayListTweetPost tweets;
 
-    public ServiceStatistics() throws IOException, ParseException { tweets = new ServiceRetrieve().getJSONResponseFromAPI(); }
-    public ServiceStatistics(ArrayListTweetPost list) throws IOException, ParseException { tweets = list; }
-
+    public ServiceStatistics() throws IOException, ParseException {
+        //Recupero l'ArrayListTweetPost effettuando una chiamata alla API con parametri standard
+        //location = Milano, result_type = recent, count = 20, lang = it
+        tweets = new ServiceRetrieve().getJSONResponseFromAPI();
+    }
+    public ServiceStatistics(ArrayListTweetPost list) { tweets = list; }
+    //Composizione JSON in base al campo su cui effettuare le statistiche
+    //created_at - Frequenza Tweet
+    //listed_count - Somma, Minimo, Media, Massimo, Deviazione
     public String statistics(String stats_field) throws IOException, ParseException {
         String str = "{\"statistics\":{";
         switch(stats_field) {
@@ -36,16 +42,25 @@ public class ServiceStatistics {
         return str;
     }
 
+    //Ritorno valore frequenza Tweet
     public float freqStatistic(){ return new FreqStatistic().getValues(tweets); }
+    //Ritorno valore somma post utenti
     public float sumStatistics() throws IOException, ParseException { return new SumStatistic().getValues(tweets); }
+    //Ritorno valore minimo post utenti
     public float minStatistics() throws IOException, ParseException { return new MinStatistic().getValues(tweets); }
+    //Ritorno valore massimo post utenti
     public float maxStatistics() throws IOException, ParseException { return new MaxStatistic().getValues(tweets); }
+    //Ritorno valore media post utenti
     public float avgStatistics() throws IOException, ParseException { return new AvgStatistic().getValues(tweets); }
+    //Ritorno valore deviazione standard post utenti
     public float devStatistics() throws IOException, ParseException { return new DevStatistic().getValues(tweets); }
 
     public ArrayList<Integer> StringToInt(ArrayListTweetPost list){
         ArrayList<Integer> conv = new ArrayList<Integer>();
-        for(int i = 0; i < list.getAllTweets().size(); i++) { conv.add(Integer.parseInt(list.getElementByID(i).getUser_post_num())); }
+        for(int i = 0; i < list.getAllTweets().size(); i++) {
+            //Conversione numero post utente di ArrayList list in Intero + aggiunta ad ArrayList conv
+            conv.add(Integer.parseInt(list.getElementByID(i).getUser_post_num()));
+        }
         return conv;
     }
 }

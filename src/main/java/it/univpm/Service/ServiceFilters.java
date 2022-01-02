@@ -13,11 +13,15 @@ public class ServiceFilters {
     private ArrayListTweetPost tweets;
 
     public ServiceFilters() throws IOException, ParseException {
+        //Recupero l'ArrayListTweetPost effettuando una chiamata alla API con parametri standard
+        //location = Milano, result_type = recent, count = 20, lang = it
         tweets = new ServiceRetrieve().getJSONResponseFromAPI();
     }
 
     public ArrayListTweetPost filters(String filter, String field, String value){
         ArrayListTweetPost response;
+        //Search - hashtags, mentions, username
+        //Lower, Upper, Included - post_num
         switch(filter)
         {
             case "search":
@@ -39,6 +43,7 @@ public class ServiceFilters {
             default:
                 response = null;
         }
+        //Ritorno - ArrayListTweetPost con i soli Tweet che soddisfano i filtri applicati
         return response;
     }
 }

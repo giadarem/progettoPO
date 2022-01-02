@@ -10,6 +10,7 @@ public class Attribute {
         this.setAttribute_description(attribute_description);
     }
 
+    //GETTER & SETTER
     public String getAttribute_name() {return attribute_name;}
     public void setAttribute_name(String attribute_name) {this.attribute_name = attribute_name;}
 

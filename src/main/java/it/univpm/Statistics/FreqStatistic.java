@@ -13,6 +13,7 @@ public class FreqStatistic extends AbstractStatistic {
 
     @Override
     public float getValues(ArrayListTweetPost list){
+        //Preparazione variabili per conversione orario in secondi
         int[] array_seconds = new int [list.getAllTweets().size()];
         String[] date_split = new String[6];
         String[] time_split = new String[3];
@@ -20,11 +21,15 @@ public class FreqStatistic extends AbstractStatistic {
 
         for(int list_count = 0; list_count < list.getAllTweets().size(); list_count++)
         {
+            //Recupero la data di ogni Tweet
             String date_str = list.getElementByID(list_count).getPostDate();
             date_split = date_str.split(" ");
+            //Ottengo l'orario
             time_split = date_split[3].split(":");
+            //Convero l'orario in secondi
             array_seconds[list_count] = Integer.parseInt(time_split[2])+Integer.parseInt(time_split[1])*60+Integer.parseInt(time_split[0])*3600;
 
+            //Se è l'ultima esecuzione calcolo la frequenza
             if((list_count+1) == list.getAllTweets().size()) { frequency = (array_seconds[0] - array_seconds[list_count])/list.getAllTweets().size(); }
         }
 

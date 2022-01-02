@@ -14,21 +14,21 @@ public class ArrayListTweetPost {
         this.tweet = new ArrayList<>();
     }
 
+    //Aggiunta elemento all'ArrayList
     public void addElement(TweetPost tp) {
         tweet.add(tp);
     }
-
+    //Recupero singolo Tweet nella posizione specificata
     public TweetPost getElementByID(int index) {
         return tweet.get(index);
     }
-
+    //Recupero tutto l'ArrayList - utilizzato per ottenimento dimensione
     public ArrayList<TweetPost> getAllTweets() {
         return this.tweet;
     }
-
+    //Composizione e ritorno del JSON Composto da tutti i Tweet presenti
     public String getAll() {
         String str = "{\"tweets\":[";
-        //for(TweetPost tp:this.tweet) {
         for (int i = 0; i < this.tweet.size(); i++) {
             str += "{\"post_date\":\"" + this.tweet.get(i).getPostDate() + "\",";
             str += "\"post_id\":\"" + this.tweet.get(i).getPost_id() + "\",";

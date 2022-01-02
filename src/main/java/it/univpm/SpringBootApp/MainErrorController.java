@@ -10,14 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
-import java.lang.constant.Constable;
-import java.util.Collection;
-import java.util.Map;
 
 @Controller
 public class MainErrorController implements ErrorController{
     private static final Logger LOGGER = LoggerFactory.getLogger(MainErrorController.class);
 
+    public MainErrorController(){}
     public String getErrorPath(){return "{\"page\":\"/error\"}";}
 
     @RequestMapping("/error")

@@ -1,7 +1,6 @@
 package it.univpm.Service;
 
 import org.json.JSONArray;
-import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -10,7 +9,7 @@ import java.util.Scanner;
 public class APIJsonRetrieve {
     public APIJsonRetrieve() {}
 
-    public org.json.JSONArray retrieve(String location, String type, String count, String lang) throws IOException, ParseException, ParseException {
+    public JSONArray retrieve(String location, String type, String count, String lang) throws IOException {
         String geolocation = "";
 
         //check params
@@ -25,7 +24,7 @@ public class APIJsonRetrieve {
                 geolocation = "43.6158299,13.518915,10km";
                 break;
             default:
-                break;
+                return null;
         }
         if (!type.equals("recent") && !type.equals("popular") && !type.equals("mixed")) type = "recent";
         if (Integer.parseInt(count) <= 0 || Integer.parseInt(count) > 100) count = String.valueOf(20);
@@ -36,15 +35,19 @@ public class APIJsonRetrieve {
         return call(url);
     }
 
-    private org.json.JSONArray call(String url) throws ParseException, IOException {
+    private JSONArray call(String url) throws IOException {
+        //Apro la connessione
         URL call_url = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) call_url.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
+        //status code
         int response_code = conn.getResponseCode();
 
+        //Se non corretto - eccezione
         if (response_code != 200) {
             throw new RuntimeException("httpResponseCode: " + response_code);
+        //Se corretto
         } else {
             //Action - Api Call
             StringBuilder streamStr = new StringBuilder();
@@ -54,7 +57,7 @@ public class APIJsonRetrieve {
             }
             scanner.close();
 
-            //Conversione in JSON OBJ
+            //Ritorno parsed JSON
             JSONArray arrayObject = new ServiceRetrieve().getArrayJSON(String.valueOf(streamStr), "statuses");
             return arrayObject;
         }

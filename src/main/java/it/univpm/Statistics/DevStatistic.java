@@ -19,15 +19,17 @@ public class DevStatistic extends AbstractStatistic {
     @Override
     public float getValues(ArrayListTweetPost list) throws IOException, ParseException {
         LOGGER.info("*** REQUEST STATUS [\"statistics - DEV\"]- " + HttpStatus.OK + " ***");
+        //Ritorno il valore del calcolo della radice della varianza
         return (float) Math.sqrt(getVariance(new ServiceStatistics(list).StringToInt(list)));
     }
 
+    //Calcolo della media
     public float getMean(ArrayList<Integer> list){
         float sum = 0;
         for(float f : list) { sum += f; }
         return (sum/list.size());
     }
-
+    //Calcolo della varianza
     public float getVariance(ArrayList<Integer> list){
         float mean = getMean(list);
         float sum = 0;

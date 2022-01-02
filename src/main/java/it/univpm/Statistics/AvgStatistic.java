@@ -6,7 +6,6 @@ import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
-
 import java.io.IOException;
 
 public class AvgStatistic extends AbstractStatistic {
@@ -17,6 +16,7 @@ public class AvgStatistic extends AbstractStatistic {
     @Override
     public float getValues(ArrayListTweetPost list) throws IOException, ParseException {
         LOGGER.info("*** REQUEST STATUS [\"statistics - AVG\"]- " + HttpStatus.OK + " ***");
+        //Utilizzando la classe della sommatoria ritorno la media utilizzando la dimensione della lista fornita
         return (new SumStatistic().getValues(list)/list.getAllTweets().size());
     }
 }
