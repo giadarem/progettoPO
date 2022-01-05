@@ -11,10 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * la classe gestisce gli errori
+ *
+ */
 @Controller
 public class MainErrorController implements ErrorController{
     private static final Logger LOGGER = LoggerFactory.getLogger(MainErrorController.class);
 
+    public MainErrorController(){}
     public String getErrorPath(){return "{\"page\":\"/error\"}";}
 
     @RequestMapping("/error")
@@ -31,7 +36,7 @@ public class MainErrorController implements ErrorController{
                 errorPage = "error/404";
                 LOGGER.error("Error 404");
             }else if(statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()){
-                pageTitle = "internal server error ";
+                pageTitle = "Internal Server Error";
                 errorPage = "error/500";
                 LOGGER.error("Error 500");
             }else if(statusCode == HttpStatus.FORBIDDEN.value()){

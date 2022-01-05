@@ -1,5 +1,19 @@
 package it.univpm.Model;
 
+/**
+ * la classe ci permette di stabilire come è composto un
+ * Tweet con i suoi parametri più significativi
+ * @param post_date, rappresenta la data in cui viene postato un Tweet
+ * @param post_id, rappresenta l'id del post
+ * @param user_id, rappresenta l'id dell'utente
+ * @param user_name, rappresenta il nome utente
+ * @param user_post_num, rappresenta il numero di Tweet dell'utente
+ * @param post_lang, rappresenta la lingua del Tweet
+ * @param post_typ, rappresenta la tipologia di Tweet (recente, popolare, entrambi)
+ * @param [] user_post_mentions  rappresenta tutte le menzioni presenti nel Tweet
+ * @param [] post_hashtags rappresenta tutti gli hashtags presenti nel Tweet
+ *
+ */
 public class TweetPost {
     private String post_date;
     private String post_id;
@@ -13,6 +27,7 @@ public class TweetPost {
     private String[] post_hashtags;
 
     //COSTRUTTORI
+    //Vuoto
     public TweetPost(){
         this.post_date = "";
         this.post_id = "";
@@ -26,6 +41,7 @@ public class TweetPost {
         this.post_hashtags = null;
     }
 
+    //Per singoli parametri
     public TweetPost(String postDate, String postID, String userID,String userName,String userPostNum,
                             String postLang,String postType, String location, String[] userPostMentions,String[] postHashtags){
         setPostDate(postDate);
@@ -40,6 +56,7 @@ public class TweetPost {
         setPost_hashtags(postHashtags);
     }
 
+    //Per oggetto TweetPost
     public TweetPost(TweetPost tp){
         setPostDate(tp.getPostDate());
         setPost_id(tp.getPost_id());
@@ -73,7 +90,6 @@ public class TweetPost {
     public void setPost_type(String post_type) {this.post_type = post_type;}
 
     public String[] getUser_post_mentions() {return user_post_mentions;}
-    public String getUSer_post_mentions(String[] str, int id){return str[id];}
     public void setUser_post_mentions(String[] user_post_mentions) {this.user_post_mentions = user_post_mentions;}
 
     public String[] getPost_hashtags() {return post_hashtags;}
