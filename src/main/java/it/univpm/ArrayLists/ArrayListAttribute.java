@@ -4,9 +4,12 @@ import it.univpm.Model.Attribute;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
-
 import java.util.ArrayList;
 
+/**
+ * la classe compone e fa il ritorno del JSON composto da tutti gli attributi presenti
+ *
+ */
 public class ArrayListAttribute {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArrayListAttribute.class);
     private ArrayList<Attribute> attributes;
@@ -15,7 +18,9 @@ public class ArrayListAttribute {
         this.attributes = new ArrayList<>();
     }
 
+    //Aggiunta di un elemento all'ArrayList
     public void addElement(Attribute at){this.attributes.add(at);}
+    //Composizione e ritorno del JSON Composto da tutti gli attributi presenti
     public String getAll(){
         String str = "{\"attributes\":[";
 
