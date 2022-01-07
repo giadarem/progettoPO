@@ -12,7 +12,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
 
 
 
-#### DESCRIZIONE GENERALE
+## DESCRIZIONE GENERALE
 
 Il nostro applicativo è un RESTfull web Service, ovvero un sistema software che comunica con il client attraverso il protocollo HTTP. Più precisamente definisce delle risorse accessibili via Web o API Testing (es. Postman), tramite URL e mappa le operazioni CRUD (Create, Delete, Update, Delete).
 
@@ -24,7 +24,7 @@ L'applicativo permette di:
 
 
 
-#### FUNZIONAMENTO DEL PROGETTO
+## FUNZIONAMENTO DEL PROGETTO
 
 Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'utente usando le, rotte qui descritte può ottenere la sua risposta in file json.
 
@@ -32,7 +32,7 @@ Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'
 
 
 
-#### ROTTE
+## ROTTE
 
 | DESTINAZIONE                                                 | DESCRIZIONE                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -49,7 +49,7 @@ E' possibile effettuare le chiamate sia installando un API Testing   (Postman) s
 
 Le chiamate per tutte le Statistics e Filter, saranno solo sulla città di Milano.
 
-###### 
 
-#### FUNZIONAMENTO DEL PROGETTO
+
+## FUNZIONAMENTO DEL PROGETTO
 
