@@ -29,8 +29,7 @@ L'applicativo permette di:
 
 Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'utente, usando le rotte qui descritte, può ottenere la sua risposta in file json.
 
-![immagine rotte](https://github.com/giadarem/progettoPO/tree/master/img/immagine utente rotte.jpeg)
-
+![schema rotte](https://github.com/giadarem/progettoPO/tree/master/img/immagine_utente_rotte.jpeg)
 
 
 ## ROTTE
