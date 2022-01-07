@@ -24,9 +24,6 @@ public class ServiceRetrieve {
 
         return obj;
     }
-<<<<<<< HEAD
-
-=======
     
     /**
      * richiama l'API passando i parametri per riferimento
@@ -35,7 +32,6 @@ public class ServiceRetrieve {
      * @throws IOException
      * @throws ParseException
      */
->>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
     //STRING - API RESPONSE
     public String getJSONResponseFromAPI(String location, String type, String count, String lang) throws IOException, ParseException {
         ArrayListTweetPost response = action(location, type, count, lang);
@@ -68,11 +64,7 @@ public class ServiceRetrieve {
                 String created_at = (String) obj_statuses.get("created_at");
                 //ID Univoco del Tweet
                 String post_id = (String) obj_statuses.get("id_str");
-<<<<<<< HEAD
-                //Recupero gli oggetti necessarri per il l'ottenimento dei parametri successivi
-=======
                 //Recupero gli oggetti necessarri per l'ottenimento dei parametri successivi
->>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
                 JSONObject obj_metadata = (JSONObject) obj_statuses.get("metadata");
                 JSONObject obj_user = (JSONObject) obj_statuses.get("user");
                 JSONObject obj_entities = (JSONObject) obj_statuses.get("entities");

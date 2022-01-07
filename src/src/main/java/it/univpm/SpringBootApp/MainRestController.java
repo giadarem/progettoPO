@@ -32,8 +32,6 @@ import java.lang.String;
    NB: I parametri sono opzionali, possono essere omessi o parziali - hanno un valore di default
 */
 
-<<<<<<< HEAD
-=======
 /** RestController contiene tutte le richieste che si possono fare al server
  * 
  * @author Giada Remedia
@@ -41,7 +39,6 @@ import java.lang.String;
  *
  */
 
->>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
 @RestController
 @RequestMapping(value = "/api", method = RequestMethod.GET, produces = "application/json")
 public class MainRestController {
@@ -55,8 +52,6 @@ public class MainRestController {
         count -> (Int) > 0 & < 100 - Default: 20
         lang -> it, fr, en, es - Default: it
     */
-<<<<<<< HEAD
-=======
     
     /** richiede dei parametri (non obbligatori)
      * 
@@ -68,7 +63,6 @@ public class MainRestController {
      * @throws IOException
      * @throws ParseException
      */
->>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
     @GetMapping("/get-tweets")
     public ResponseEntity tweets(@RequestParam(name="location", required=false, defaultValue = "Milano") String location,
                                         @RequestParam(name="result_type", required=false, defaultValue = "recent") String type,
@@ -108,8 +102,6 @@ public class MainRestController {
         field -> (search) hashtags, mentions, username | (lower,upper,included) post_num - Default: post_num
         value -> (String) in caso di ricerca | (Int) > 0 - Default: 20 [Included option - 20-40 / Occorre passare Min e Max range]
     */
-<<<<<<< HEAD
-=======
     /**
      * richiede dei parametri (non obbligatori) per poterci effettuare dei filtri
      * recuperando un'array di Tweet dopo 
@@ -123,7 +115,6 @@ public class MainRestController {
      * @throws IOException
      * @throws ParseException
      */
->>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
     @GetMapping("/filters")
     public ResponseEntity filters(@RequestParam(name="filter", required = false, defaultValue = "lower") String filter,
                                   @RequestParam(name="field", required = false, defaultValue = "post_num") String field,
@@ -155,8 +146,6 @@ public class MainRestController {
         field -> (search) hashtags, mentions, username | (lower,upper,included) post_num - Default: post_num
         value -> (String) in caso di ricerca | (Int) > 0 - Default: 20 [Included option - 20-40 / Occorre passare Min e Max range]
     */
-<<<<<<< HEAD
-=======
     
     /**
      * richiede dei parametri (non obbligatori) per effettuarci delle statistiche
@@ -169,7 +158,6 @@ public class MainRestController {
      * @throws IOException
      * @throws ParseException
      */
->>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
     @GetMapping("/statistics")
     public ResponseEntity statistics(@RequestParam(name="stats_field", required = false, defaultValue = "created_at") String stats_field,
                                      @RequestParam(name="filter", required = false) String filter,

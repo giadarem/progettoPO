@@ -9,15 +9,12 @@ import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 
-<<<<<<< HEAD
-=======
 /**
  *  Service dedicato al calcolo dell'array filtrato
  *  che in base al JSONObject filtro passato dall'utente,   
  *  sceglie ed applica il filtro selezionato.
  */
 
->>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
 public class ServiceFilters {
     private ArrayListTweetPost tweets;
 

@@ -33,22 +33,29 @@ Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'
 
 #### ROTTE
 
-| DESTINAZIONE                                                 | DESCRIZIONE                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| /api/get-tweets                                              | chiamata generale, a cui vanno applicati attributi visualizza tutti i tweet(di Milano) |
-| /api/get-tweets?location=<value>&result_type=<value>&count=<value>&lang=<value> | chiamata specifica in cui vengono visualizzati i Tweet (Ancona/Milano/Napoli) |
-| /api/get-attributes                                          | visualizza i metadati e la loro descrizione                  |
-| /api/filters                                                 | chiamata generale che visualizza i tweet con i filtri impostati di default (lower, post_num, 20 ). |
-| /api/filters?filter=<value>&field=<value>&value=<value>      | visualizza i tweet con gli attribuiti specificati dall'utente. |
-| /api/statistics                                              | visualizza le statistiche sulla frequenza dei post           |
-| /api/statistics?stats_field=<value>                          | visualizza le statistiche su determinati filtri              |
-| /api/statistics?stats_field=<value>&filter=<value>&field=<value>&value=<value> | Visualizza le statistiche su un campo dei Tweet, applicando prima un filtro |
+| DESTINAZIONE                                                 | DESCRIZIONE                                                  | esempio di chiamata |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- |
+| /api/get-tweets                                              | chiamata generale, a cui vanno applicati attributi visualizza tutti i tweet(di Milano) | /api/filters        |
+| /api/get-tweets?location=<value>&result_type=<value>&count=<value>&lang=<value> | chiamata specifica in cui vengono visualizzati i Tweet (Ancona/Milano/Napoli) |                     |
+| /api/get-attributes                                          | visualizza i metadati e la loro descrizione                  |                     |
+| /api/filters                                                 | chiamata generale che visualizza i tweet con i filtri impostati di default (lower, post_num, 20 ). |                     |
+| /api/filters?filter=<value>&field=<value>&value=<value>      | visualizza i tweet con gli attribuiti specificati dall'utente. |                     |
+| /api/statistics                                              | visualizza le statistiche sulla frequenza dei post           |                     |
+| /api/statistics?stats_field=<value>                          | visualizza le statistiche su determinati filtri              |                     |
+| /api/statistics?stats_field=<value>&filter=<value>&field=<value>&value=<value> | Visualizza le statistiche su un campo dei Tweet, applicando prima un filtro |                     |
 
-E' possibile effettuare le chiamate sia installando un API Testing   (Postman) sia tramite richiesta all'url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
+E' possibile effettuare le chiamate sia installando un API Testing   (Postman) sia tramite richiesta all'url
+
+ http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 
 Le chiamate per tutte le Statistics e Filter, saranno solo sulla città di Milano.
 
-###### 
-
 #### FUNZIONAMENTO DEL PROGETTO
+
+| tipo di filtro                                               | descrizione                                                  | esempio di chiamata |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- |
+| /api/filters                                                 | la chiamata restituisce i tweet degli utenti che hanno<br />un numero di tweet effettuati minore di 20 | /api/filters        |
+| /api/get-tweets?location=<value>&result_type=<value>&count=<value>&lang=<value> |                                                              |                     |
+|                                                              |                                                              |                     |
+|                                                              |                                                              |                     |
 
