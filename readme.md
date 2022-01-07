@@ -64,7 +64,7 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 * **value**: Identifica il valore da ricercare nel campo specificato 
 
 
-####esempio filtro con valori di default
+	#### esempio filtro con valori di default </br>
 ![esempio filtri](https://github.com/giadarem/progettoPO/tree/master/img/es3.png)
 
   
