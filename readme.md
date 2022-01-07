@@ -1,4 +1,5 @@
 # TWITTER GEO
+
 Di seguito verrà riportato il funzionamento del progetto d'esame denominato "TWITTER - Geo", svolto nel corso di "programmazione ad oggetti" anno 2021/2022.
 
 L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per effettuare statistiche sui dati Geo di Twitter su diverse location.
@@ -40,8 +41,8 @@ Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'
 | /api/get-tweets/api/get-tweets?location=<value>&result_type=<value>&count=<value>&lang=<value> | chiamata specifica in cui vengono visualizzati i Tweet (Ancona/Milano/Napoli) | /api/get-tweets?location=<Ancona>&result_type=<recent>&count=<50>&lang=<it> |
 | /api/get-attributes                                          | visualizza i metadati e la loro descrizione                  | /api/get-attributes                                          |
 | /api/filters                                                 | chiamata generale che visualizza i tweet con i filtri impostati di default (lower, post_num, 20 ). | /api/filters                                                 |
-| /api/filters?filter=<value>&field=<value>&value=<value>      | visualizza i tweet con gli attribuiti specificati dall'utente. |                                                              |
-| /api/statistics                                              | visualizza le statistiche sulla frequenza dei post           |                                                              |
+| /api/filters?filter=<value>&field=<value>&value=<value>      | visualizza i tweet con gli attribuiti specificati dall'utente. | /api/filters?filter=<search>&field=<username>&value=<Spring> |
+| /api/statistics                                              | visualizza le statistiche sulla frequenza dei post           | /api/statistics                                              |
 | /api/statistics?stats_field=<value>                          | visualizza le statistiche su determinati filtri              |                                                              |
 | /api/statistics?stats_field=<value>&filter=<value>&field=<value>&value=<value> | Visualizza le statistiche su un campo dei Tweet, applicando prima un filtro |                                                              |
 
@@ -50,3 +51,28 @@ E' possibile effettuare le chiamate sia installando un API Testing   (Postman) s
  http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 
 Le chiamate per tutte le Statistics e Filter, saranno solo sulla città di Milano.
+
+#### FILTRI 
+
+-  	 Richiede parametri non obbligatori in quanto, se non forniti, ottengono un valore di default.
+
+- filter [Identifica il tipo di filtro da applicare] -
+
+  - search, lower, upper, included - Default: lower --> Se fornito un valore non corretto, viene gestito l'errore nel main [Riga 95-98]
+
+-  field [Identifica il campo su cui applicare il filtro] 
+
+  -  Nel caso di filtro search --> hashtags, mentions, username
+  - Nel caso di filtro lower, upper, included --> post_num
+        Default: post_num
+    -  Se vengono passati campi non corretti, l'errore viene gestito dal main [Riga: 102-105]
+
+-  value [Identifica il valore da ricercare nel campo specificato] 
+
+- 
+
+- 
+
+  
+
+  
