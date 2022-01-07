@@ -26,7 +26,7 @@ L'applicativo permette di:
 
 ## FUNZIONAMENTO DEL PROGETTO
 
-Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'utente usando le, rotte qui descritte può ottenere la sua risposta in file json.
+Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'utente, usando le rotte qui descritte, può ottenere la sua risposta in file json.
 
 ![](C:\Users\giada\Desktop\università\secondo anno\programmazioneOggetti\rotte.png)
 
