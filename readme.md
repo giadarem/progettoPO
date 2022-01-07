@@ -1,8 +1,9 @@
+# TWITTER GEO
 Di seguito verrà riportato il funzionamento del progetto d'esame denominato "TWITTER - Geo", svolto nel corso di "programmazione ad oggetti" anno 2021/2022.
 
 L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per effettuare statistiche sui dati Geo di Twitter su diverse location.
 
-#### indice
+## indice
 
 - Descrizione generale
 - Funzionamento del progetto
@@ -11,7 +12,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
 
 
 
-#### Descrizione generale
+## DESCRIZIONE GENERALE
 
 Il nostro applicativo è un RESTfull web Service, ovvero un sistema software che comunica con il client attraverso il protocollo HTTP. Più precisamente definisce delle risorse accessibili via Web o API Testing (es. Postman), tramite URL e mappa le operazioni CRUD (Create, Delete, Update, Delete).
 
@@ -23,7 +24,7 @@ L'applicativo permette di:
 
 
 
-#### FUNZIONAMENTO DEL PROGETTO
+## FUNZIONAMENTO DEL PROGETTO
 
 Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'utente usando le, rotte qui descritte può ottenere la sua risposta in file json.
 
@@ -31,7 +32,7 @@ Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'
 
 
 
-#### ROTTE
+## ROTTE
 
 | DESTINAZIONE                                                 | DESCRIZIONE                                                  | esempio di chiamata |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- |
@@ -50,7 +51,13 @@ E' possibile effettuare le chiamate sia installando un API Testing   (Postman) s
 
 Le chiamate per tutte le Statistics e Filter, saranno solo sulla città di Milano.
 
+<<<<<<< HEAD
 #### FUNZIONAMENTO DEL PROGETTO
+=======
+
+
+## FUNZIONAMENTO DEL PROGETTO
+>>>>>>> 1c73b6666575ce9a60c1665c2adf408a1c88a894
 
 | tipo di filtro                                               | descrizione                                                  | esempio di chiamata |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- |
