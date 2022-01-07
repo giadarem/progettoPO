@@ -20,8 +20,8 @@ Il nostro applicativo è un RESTfull web Service, ovvero un sistema software che
 L'applicativo permette di:
 
 - visualizzare i tweet più recenti impostando, volendo, città, numero, tipologia e lingua dei tweet
-- eseguire filtri sul numero di post dell'utente, hashtags, menzioni e username
-- effettuare statistiche sulla frequenza dei post, massimo, minimo, media e deviazione standard
+- eseguire filtri sul numero di post dell'utente, hashtags, menzioni e username nella città di Milano
+- effettuare statistiche sulla frequenza dei post, massimo, minimo, media e deviazione standard nella città di Milano
 
 
 
@@ -49,8 +49,18 @@ E' possibile effettuare le chiamate sia installando un API Testing   (Postman) s
 
  http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 
-Le chiamate per tutte le Statistics e Filter, saranno solo sulla città di Milano.
 
+#### esempio chiamata di tweet con i valori di default </br> 
+![esempio Tweet](https://github.com/giadarem/progettoPO/tree/master/img/immagine get_tweets.jpg)
+* **post_id**: id del post
+* **user_id**: id dell'utente
+* **user_post_num**: numero di post dell'utente
+* **post_lang**: lingua del tweet
+* **post_type**: tipologia del tweet
+* **location**: località in cui è stato fatto il tweet
+* **user_post_mensions**: menzioni fatte nel tweet
+* **postDate**: data in cui è stato fatto il post
+* **screen_name**: nome utente dei profili taggati
 ### FILTRI 
 I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono forniti, ottengono un valore di dafeult.
 
