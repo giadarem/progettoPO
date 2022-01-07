@@ -64,7 +64,14 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 * **value**: Identifica il valore da ricercare nel campo specificato 
 
 
-	#### esempio filtro con valori di default </br>
+#### esempio filtro con valori di default </br>
 ![esempio filtri](https://github.com/giadarem/progettoPO/tree/master/img/es3.png)
 
-  
+* **post_id**: id del post
+* **user_id**: id dell'utente
+* **user_post_num**: numero di post dell'utente
+* **post_lang**: lingua del tweet
+* **post_type**: tipologia del tweet
+* **location**: località in cui è stato fatto il tweet
+* **user_post_mensions**: menzioni fatte nel tweet
+* **postDate**: data in cui è stato fatto il post
