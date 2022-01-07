@@ -4,6 +4,10 @@ import it.univpm.Abstract.AbstractFilter;
 import it.univpm.ArrayLists.ArrayListTweetPost;
 import it.univpm.Model.TweetPost;
 
+/**
+ * classe che implementa il filtro sui campi hashtags, username, mentions
+ *
+ */
 public class SearchFilter extends AbstractFilter{
     private String search_value = "";
 
@@ -17,7 +21,11 @@ public class SearchFilter extends AbstractFilter{
     public void setSearch_value(String search_value) {
         this.search_value = search_value;
     }
-
+    
+    /** 
+     * il metodo verifica se il valore da ricercare è contenuto nell'elemento fornito
+     * @return true se trova il valore, false se non lo trova
+     */
     @Override
     public boolean searchElement(TweetPost elem) {
         boolean check = false;
@@ -50,6 +58,11 @@ public class SearchFilter extends AbstractFilter{
         return check;
     }
 
+    /**
+     * verifica la presenza del valore da ricercare all'interno di ogni Tweet,
+     * in tal caso lo aggiunge all'array di appoggio dei Tweet
+     * @return l'array di appoggio dei Tweet
+     */
     @Override
     public ArrayListTweetPost getFound(ArrayListTweetPost list) {
         ArrayListTweetPost array = new ArrayListTweetPost();

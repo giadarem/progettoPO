@@ -6,6 +6,13 @@ import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+/**
+ *  Service dedicato al calcolo delle statistiche.
+ */
+
+>>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
 public class ServiceStatistics {
     private ArrayListTweetPost tweets;
 

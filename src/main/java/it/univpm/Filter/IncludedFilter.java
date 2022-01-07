@@ -4,6 +4,11 @@ import it.univpm.Abstract.AbstractFilter;
 import it.univpm.ArrayLists.ArrayListTweetPost;
 import it.univpm.Model.TweetPost;
 
+/** 
+ * classe che implementa il filtro "essere incluso tra due parametri"
+ * @param search_value, rappresenta il valore che deve essere incluso tra i due parametri
+ *
+ */
 public class IncludedFilter extends AbstractFilter {
     private String search_value = "";
 
@@ -18,6 +23,11 @@ public class IncludedFilter extends AbstractFilter {
         this.search_value = search_value;
     }
 
+    /**
+     * verifica se all'interno dei Tweet esiste un valore intero compreso tra i valori forniti 
+     * 
+     * @return true se trova il valore, false se non lo trova
+     */
     @Override
     public boolean searchElement(TweetPost elem) {
         boolean check = false;
@@ -35,7 +45,12 @@ public class IncludedFilter extends AbstractFilter {
         }
         return check;
     }
-
+    /**
+     * aggiunge un Tweet all'array solo se il Tweet presenta un valore 
+     * incluso tra i due valori forniti all'interno dei Tweet
+     * 
+     * @return l'array contenente i tweet
+     */
     @Override
     public ArrayListTweetPost getFound(ArrayListTweetPost list) {
         ArrayListTweetPost array = new ArrayListTweetPost();

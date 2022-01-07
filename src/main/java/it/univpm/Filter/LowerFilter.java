@@ -4,6 +4,11 @@ import it.univpm.Abstract.AbstractFilter;
 import it.univpm.ArrayLists.ArrayListTweetPost;
 import it.univpm.Model.TweetPost;
 
+/**
+ * classe che implementa il filtro "essere minore di un certo valorei"
+ * @param search_value, rappresenta il valore su cui fare la verifica
+ *
+ */
 public class LowerFilter extends AbstractFilter {
     private String search_value = "";
 
@@ -19,7 +24,12 @@ public class LowerFilter extends AbstractFilter {
     public void setSearch_value(String search_value) {
         this.search_value = search_value;
     }
-
+    
+    /**
+     * verifica se all'interno di ogni Tweet esiste un valore minore del valore fornito
+     * 
+     * @return true se trova il valore, false se non lo trova
+     */
     @Override
     public boolean searchElement(TweetPost elem) {
         boolean check = false;
@@ -33,7 +43,13 @@ public class LowerFilter extends AbstractFilter {
         }
         return check;
     }
-
+    
+    /**
+     * aggiunge un Tweet all'array solo se il Tweet presenta un valore 
+     * minore del valore fornitp
+     * 
+     * @return l'array contenente i tweet
+     */
     @Override
     public ArrayListTweetPost getFound(ArrayListTweetPost list) {
         ArrayListTweetPost array = new ArrayListTweetPost();

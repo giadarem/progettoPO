@@ -11,6 +11,10 @@ import org.springframework.http.HttpStatus;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * calcola la deviazione standard
+ *
+ */
 public class DevStatistic extends AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(DevStatistic.class);
 

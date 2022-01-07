@@ -6,6 +6,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 
+/**
+ * calcola la statistica "ogni quanto tempo avviene un tweet"
+ *
+ */
 public class FreqStatistic extends AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(FreqStatistic.class);
 

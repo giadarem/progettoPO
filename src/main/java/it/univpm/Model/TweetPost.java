@@ -1,5 +1,19 @@
 package it.univpm.Model;
 
+/**
+ * la classe ci permette di stabilire come è composto un
+ * Tweet con i suoi parametri più significativi
+ * @param post_date, rappresenta la data in cui viene postato un Tweet
+ * @param post_id, rappresenta l'id del post
+ * @param user_id, rappresenta l'id dell'utente
+ * @param user_name, rappresenta il nome utente
+ * @param user_post_num, rappresenta il numero di Tweet dell'utente
+ * @param post_lang, rappresenta la lingua del Tweet
+ * @param post_typ, rappresenta la tipologia di Tweet (recente, popolare, entrambi)
+ * @param [] user_post_mentions  rappresenta tutte le menzioni presenti nel Tweet
+ * @param [] post_hashtags rappresenta tutti gli hashtags presenti nel Tweet
+ *
+ */
 public class TweetPost {
     private String post_date;
     private String post_id;

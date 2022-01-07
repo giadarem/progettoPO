@@ -1,5 +1,10 @@
 package it.univpm.Model;
 
+/**
+ * la classe ci permette di stabilire come è composto un metadato:
+ * nome assegnato ed una sua descrizione
+ *
+ */
 public class Attribute {
     private String attribute_name;
     private String attribute_description;

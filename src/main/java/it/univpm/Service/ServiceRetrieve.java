@@ -9,6 +9,11 @@ import org.json.JSONObject;
 import org.json.simple.parser.ParseException;
 import java.io.IOException;
 
+/**
+ * la classe serve per fare le chiamate all'API e crea gli 
+ * arrayList 
+ * 
+ */
 public class ServiceRetrieve {
     public ServiceRetrieve() {}
 
@@ -19,7 +24,18 @@ public class ServiceRetrieve {
 
         return obj;
     }
+<<<<<<< HEAD
 
+=======
+    
+    /**
+     * richiama l'API passando i parametri per riferimento
+     * @return l'oggetto contenente il JSON DEI Tweet;
+     * nel caso di oggetto nullo ritorna una stringa vuota
+     * @throws IOException
+     * @throws ParseException
+     */
+>>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
     //STRING - API RESPONSE
     public String getJSONResponseFromAPI(String location, String type, String count, String lang) throws IOException, ParseException {
         ArrayListTweetPost response = action(location, type, count, lang);
@@ -33,7 +49,13 @@ public class ServiceRetrieve {
         String location = "Milano"; String type = "recent"; String count = "20"; String lang = "it";
         return action(location, type, count, lang);
     }
-
+    /**
+     * recupera gli oggetti necessari per l'orientamento dei parametri successivi 
+     * e imposta il fusorario italiano nei Tweet
+     * @return l'array contenente i Tweet con l'orario avente il fusorario italiano
+     * @throws IOException
+     * @throws ParseException
+     */
     public ArrayListTweetPost action(String location, String type, String count, String lang) throws IOException, ParseException {
         ArrayListTweetPost array_tweet = new ArrayListTweetPost();
         //Ottengo il JSONArray "statuses" dalla chiamata alla API
@@ -46,7 +68,11 @@ public class ServiceRetrieve {
                 String created_at = (String) obj_statuses.get("created_at");
                 //ID Univoco del Tweet
                 String post_id = (String) obj_statuses.get("id_str");
+<<<<<<< HEAD
                 //Recupero gli oggetti necessarri per il l'ottenimento dei parametri successivi
+=======
+                //Recupero gli oggetti necessarri per l'ottenimento dei parametri successivi
+>>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
                 JSONObject obj_metadata = (JSONObject) obj_statuses.get("metadata");
                 JSONObject obj_user = (JSONObject) obj_statuses.get("user");
                 JSONObject obj_entities = (JSONObject) obj_statuses.get("entities");

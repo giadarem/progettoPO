@@ -6,6 +6,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import java.util.*;
 
+/**
+ * Composizione e ritorno del JSON Composto da tutti i Tweet presenti
+ *
+ */
 public class ArrayListTweetPost {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArrayListTweetPost.class);
     private ArrayList<TweetPost> tweet;

@@ -4,6 +4,11 @@ import it.univpm.Abstract.AbstractFilter;
 import it.univpm.ArrayLists.ArrayListTweetPost;
 import it.univpm.Model.TweetPost;
 
+/**
+ * classe che implementa il filtro "essere maggiore di un certo valorei"
+ * @param search_value, rappresenta il valore su cui fare la verifica
+ *
+ */
 public class UpperFilter extends AbstractFilter {
     private String search_value = "";
 
@@ -20,6 +25,11 @@ public class UpperFilter extends AbstractFilter {
         this.search_value = search_value;
     }
 
+    /**
+     * verifica se all'interno di ogni Tweet esiste un valore maggiore del valore fornito
+     * 
+     * @return true se trova il valore, false se non lo trova
+     */
     @Override
     public boolean searchElement(TweetPost elem) {
         boolean check = false;
@@ -34,6 +44,12 @@ public class UpperFilter extends AbstractFilter {
         return check;
     }
 
+    /**
+     * aggiunge un Tweet all'array solo se il Tweet presenta un valore 
+     * maggiore del valore fornitp
+     * 
+     * @return l'array contenente i tweet
+     */
     @Override
     public ArrayListTweetPost getFound(ArrayListTweetPost list) {
         ArrayListTweetPost array = new ArrayListTweetPost();

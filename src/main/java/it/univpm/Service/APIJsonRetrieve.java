@@ -6,6 +6,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
+/**
+ * la classe fa la verifica sui parametri, 
+ * compone l'URL e fa la chiamata dell'api
+ *
+ */
 public class APIJsonRetrieve {
     public APIJsonRetrieve() {}
 
@@ -34,6 +39,15 @@ public class APIJsonRetrieve {
 
         return call(url);
     }
+<<<<<<< HEAD
+=======
+    /**
+     * apre una connessione con le API
+     * @param url
+     * @return
+     * @throws IOException
+     */
+>>>>>>> 202cfeda42693eceeed05c1e40a98afe2d262ce8
 
     private JSONArray call(String url) throws IOException {
         //Apro la connessione

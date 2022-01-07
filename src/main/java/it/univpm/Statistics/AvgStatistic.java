@@ -8,6 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import java.io.IOException;
 
+/**
+ * calcola la media
+ *
+ */
 public class AvgStatistic extends AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(AvgStatistic.class);
 

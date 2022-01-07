@@ -6,6 +6,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import java.util.ArrayList;
 
+/**
+ * la classe compone e fa il ritorno del JSON composto da tutti gli attributi presenti
+ *
+ */
 public class ArrayListAttribute {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArrayListAttribute.class);
     private ArrayList<Attribute> attributes;

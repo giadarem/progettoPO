@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * la classe gestisce gli errori
+ *
+ */
 @Controller
 public class MainErrorController implements ErrorController{
     private static final Logger LOGGER = LoggerFactory.getLogger(MainErrorController.class);

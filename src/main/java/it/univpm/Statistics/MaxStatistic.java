@@ -8,6 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import java.util.ArrayList;
 
+/** 
+ * calcola il numero massimo di post presenti nei Tweet visualizzati
+ *
+ */
 public class MaxStatistic extends AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(MaxStatistic.class);
 
