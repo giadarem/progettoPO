@@ -3,7 +3,7 @@ Di seguito verrà riportato il funzionamento del progetto d'esame denominato "TW
 
 L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per effettuare statistiche sui dati Geo di Twitter su diverse location.
 
-#### indice
+## indice
 
 - Descrizione generale
 - Funzionamento del progetto
