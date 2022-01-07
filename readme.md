@@ -32,7 +32,7 @@ Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'
 ![schema rotte](https://github.com/giadarem/progettoPO/tree/master/img/immagine_utente_rotte.jpeg)
 
 
-## ROTTE
+### ROTTE
 
 | DESTINAZIONE                                                 | DESCRIZIONE                                                  | esempio di chiamata                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -51,19 +51,17 @@ E' possibile effettuare le chiamate sia installando un API Testing   (Postman) s
 
 Le chiamate per tutte le Statistics e Filter, saranno solo sulla città di Milano.
 
-#### FILTRI 
+### FILTRI 
 I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono forniti, ottengono un valore di dafeult.
 
  ##### descrizione campi:
  
-- filter: identifica il tipo di filtro da applicare; può essere di quattro tipi:  search, lower, upper e included. Il tipo di default è lower.
+* ** filter **: identifica il tipo di filtro da applicare; può essere di quattro tipi:  search, lower, upper e included. Il tipo di default è lower.
 
--  field: identifica il campo su cui applicare il filtro
-
-  -  Nel caso di filtro search: hashtags, mentions, username
-  - Nel caso di filtro lower, upper, included: post_num
-        Default: post_num
--  value: Identifica il valore da ricercare nel campo specificato 
+* ** field **: identifica il campo su cui applicare il filtro
+						* Nel caso di filtro search: hashtags, mentions, username
+						* Nel caso di filtro lower, upper, included: post_num
+* ** value **: Identifica il valore da ricercare nel campo specificato 
 
 - 
 
