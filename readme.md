@@ -11,7 +11,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
 
 
 
-#### Descrizione generale
+#### DESCRIZIONE GENERALE
 
 Il nostro applicativo è un RESTfull web Service, ovvero un sistema software che comunica con il client attraverso il protocollo HTTP. Più precisamente definisce delle risorse accessibili via Web o API Testing (es. Postman), tramite URL e mappa le operazioni CRUD (Create, Delete, Update, Delete).
 
