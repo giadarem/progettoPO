@@ -51,7 +51,7 @@ E' possibile effettuare le chiamate sia installando un API Testing   (Postman) s
 
 
 #### esempio chiamata di tweet con i valori di default </br> 
-![esempio Tweet](https://github.com/giadarem/progettoPO/tree/master/img/immagine get_tweets.jpg)
+![esempio Tweet](https://github.com/giadarem/progettoPO/tree/master/img/immagine/get_tweets.jpg)
 * **post_id**: id del post
 * **user_id**: id dell'utente
 * **user_post_num**: numero di post dell'utente
