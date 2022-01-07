@@ -8,7 +8,9 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
 
 - Descrizione generale
 - Funzionamento del progetto
-- Rotte 
+ 	* Rotte
+ 	* filtrri
+ 	* statistiche 
 - Struttura del progetto
 
 
@@ -33,6 +35,7 @@ Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'
 
 
 ### ROTTE
+url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 
 | DESTINAZIONE                                                 | DESCRIZIONE                                                  | esempio di chiamata                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -44,10 +47,6 @@ Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'
 | /api/statistics                                              | visualizza le statistiche sulla frequenza dei post           | /api/statistics                                              |
 | /api/statistics?stats_field=<value>                          | visualizza le statistiche su determinati filtri              |                                                              |
 | /api/statistics?stats_field=<value>&filter=<value>&field=<value>&value=<value> | Visualizza le statistiche su un campo dei Tweet, applicando prima un filtro |                                                              |
-
-E' possibile effettuare le chiamate sia installando un API Testing   (Postman) sia tramite richiesta all'url
-
- http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 
 
 #### esempio chiamata di tweet con i valori di default </br> 
@@ -61,6 +60,7 @@ E' possibile effettuare le chiamate sia installando un API Testing   (Postman) s
 * **user_post_mensions**: menzioni fatte nel tweet
 * **postDate**: data in cui è stato fatto il post
 * **screen_name**: nome utente dei profili taggati
+	
 ### FILTRI 
 I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono forniti, ottengono un valore di dafeult.
 
