@@ -52,21 +52,18 @@ E' possibile effettuare le chiamate sia installando un API Testing   (Postman) s
 Le chiamate per tutte le Statistics e Filter, saranno solo sulla città di Milano.
 
 #### FILTRI 
+I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono forniti, ottengono un valore di dafeult.
 
--  	 Richiede parametri non obbligatori in quanto, se non forniti, ottengono un valore di default.
+ ##### descrizione campi:
+ 
+- filter: identifica il tipo di filtro da applicare; può essere di quattro tipi:  search, lower, upper e included. Il tipo di default è lower.
 
-- filter [Identifica il tipo di filtro da applicare] -
+-  field: identifica il campo su cui applicare il filtro
 
-  - search, lower, upper, included - Default: lower --> Se fornito un valore non corretto, viene gestito l'errore nel main [Riga 95-98]
-
--  field [Identifica il campo su cui applicare il filtro] 
-
-  -  Nel caso di filtro search --> hashtags, mentions, username
-  - Nel caso di filtro lower, upper, included --> post_num
+  -  Nel caso di filtro search: hashtags, mentions, username
+  - Nel caso di filtro lower, upper, included: post_num
         Default: post_num
-    -  Se vengono passati campi non corretti, l'errore viene gestito dal main [Riga: 102-105]
-
--  value [Identifica il valore da ricercare nel campo specificato] 
+-  value: Identifica il valore da ricercare nel campo specificato 
 
 - 
 
