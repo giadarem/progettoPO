@@ -76,7 +76,8 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 
 
 #### esempio filtro con valori di default </br>
-![esempio filtri](https://github.com/giadarem/progettoPO/tree/master/img/es3.png)
+![image](https://user-images.githubusercontent.com/95341359/148640526-27f7947a-ad5b-4301-aaff-b450365961e6.png)
+
 
 * **post_id**: id del post
 * **user_id**: id dell'utente
