@@ -8,6 +8,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
 
 - Descrizione generale
 - Funzionamento del progetto
+
  	* Rotte
  	* filtrri
  	* statistiche 
@@ -45,8 +46,8 @@ url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 | /api/filters                                                 | chiamata generale che visualizza i tweet con i filtri impostati di default (lower, post_num, 20 ). | /api/filters                                                 |
 | /api/filters?filter=<value>&field=<value>&value=<value>      | visualizza i tweet con gli attribuiti specificati dall'utente. | /api/filters?filter=<search>&field=<username>&value=<Spring> |
 | /api/statistics                                              | visualizza le statistiche sulla frequenza dei post           | /api/statistics                                              |
-| /api/statistics?stats_field=<value>                          | visualizza le statistiche su determinati filtri              |                                                              |
-| /api/statistics?stats_field=<value>&filter=<value>&field=<value>&value=<value> | Visualizza le statistiche su un campo dei Tweet, applicando prima un filtro |                                                              |
+| /api/statistics?stats_field=<value>                          | visualizza le statistiche su determinati campi               | /api/statistics?stats_field=<list_count>                     |
+| /api/statistics?stats_field=<value>&filter=<value>&field=<value>&value=<value> | Visualizza le statistiche su un campo dei Tweet, applicando prima un filtro | /api/statistics?stats_field=listed_count&filt<br />er=lower&field=post_num&value=50 |
 
 
 #### esempio chiamata di tweet con i valori di default </br> 
@@ -66,7 +67,7 @@ url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono forniti, ottengono un valore di dafeult.
 
  ##### descrizione campi:
- 
+
 * **filter**: identifica il tipo di filtro da applicare; può essere di quattro tipi:  search, lower, upper e included. Il tipo di default è lower.
 
 * **field**: identifica il campo su cui applicare il filtro
@@ -80,13 +81,45 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 
 
 * **post_id**: id del post
+
 * **user_id**: id dell'utente
+
 * **user_post_num**: numero di post dell'utente
+
 * **post_lang**: lingua del tweet
+
 * **post_type**: tipologia del tweet
+
 * **location**: località in cui è stato fatto il tweet
+
 * **user_post_mensions**: menzioni fatte nel tweet
+
 * **postDate**: data in cui è stato fatto il post
 
-![Screenshot (150)](https://user-images.githubusercontent.com/95341359/148641004-d397fafc-56fd-42c4-992a-ca07e7ddc023.png)
+  #### STATISTICS
 
+  esempio di chiamata alle statistiche, sul campo listed_count
+
+![image-20220108114904525](C:\Users\npicc\AppData\Roaming\Typora\typora-user-images\image-20220108114904525.png)
+
+- Field: campo dove vengono effettuate le statistiche in questo caso listed_count
+
+- listed_count: numero dei post dell'utente
+
+- sum: somma dei post degli utenti 
+
+- max: il numero massimo di post fatti da un solo  account
+
+- min: numero minimo di post fatti da un solo account 
+
+- avg: media dei post di tutti gli utenti 
+
+- dev: devianza standar 
+
+  #### Esempio chiamata statistiche con i filtri
+
+  
+
+![image-20220108121120892](C:\Users\npicc\AppData\Roaming\Typora\typora-user-images\image-20220108121120892.png)
+
+le statistiche vengono effettuate solo sui post che vengono filtrati.
