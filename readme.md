@@ -100,7 +100,8 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 
   esempio di chiamata alle statistiche, sul campo listed_count
 
-![image-20220108114904525](C:\Users\npicc\AppData\Roaming\Typora\typora-user-images\image-20220108114904525.png)
+![Screenshot (152)](https://user-images.githubusercontent.com/95341359/148642032-7fd63aff-3dcb-4350-aade-a32331c2b0c9.png)
+
 
 - Field: campo dove vengono effettuate le statistiche in questo caso listed_count
 
@@ -120,6 +121,7 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 
   
 
-![image-20220108121120892](C:\Users\npicc\AppData\Roaming\Typora\typora-user-images\image-20220108121120892.png)
+![Screenshot (156)](https://user-images.githubusercontent.com/95341359/148642009-d6db2140-e3fa-49ea-92f0-cab3a937a816.png)
+
 
 le statistiche vengono effettuate solo sui post che vengono filtrati.
