@@ -87,3 +87,5 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 * **location**: località in cui è stato fatto il tweet
 * **user_post_mensions**: menzioni fatte nel tweet
 * **postDate**: data in cui è stato fatto il post
+
+![Screenshot (149)](https://user-images.githubusercontent.com/95341359/148640623-ec765610-dc26-4ddc-b8cb-b8716827e91b.png)
