@@ -88,4 +88,5 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 * **user_post_mensions**: menzioni fatte nel tweet
 * **postDate**: data in cui è stato fatto il post
 
-![Screenshot (149)](https://user-images.githubusercontent.com/95341359/148640623-ec765610-dc26-4ddc-b8cb-b8716827e91b.png)
+![Screenshot (150)](https://user-images.githubusercontent.com/95341359/148641004-d397fafc-56fd-42c4-992a-ca07e7ddc023.png)
+
