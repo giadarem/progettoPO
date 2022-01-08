@@ -50,7 +50,8 @@ url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 
 
 #### esempio chiamata di tweet con i valori di default </br> 
-![esempio Tweet](https://github.com/giadarem/progettoPO/tree/master/img/immagine/get_tweets.jpg)
+![immagine get_tweets](https://user-images.githubusercontent.com/95341359/148639969-3f26d338-076b-4a42-a12b-16183f3e5f29.jpg)
+
 * **post_id**: id del post
 * **user_id**: id dell'utente
 * **user_post_num**: numero di post dell'utente
