@@ -116,7 +116,7 @@ Si può scegliere di effettuare la statistica su tutti i tweet, o ad una parte d
 ![Screenshot (156)](https://user-images.githubusercontent.com/95341359/148642009-d6db2140-e3fa-49ea-92f0-cab3a937a816.png)
 
 **descrizione campi:**
-- **Field**: campo in cui vengono effettuate le statistiche
+* **Field**: campo in cui vengono effettuate le statistiche
 * **sum**: somma
 * **max**: massimo
 * **min**: minimo
