@@ -78,7 +78,7 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 #### esempio filtro con valori di default </br>
 ![image](https://user-images.githubusercontent.com/95341359/148640526-27f7947a-ad5b-4301-aaff-b450365961e6.png)
 
-
+ ##### descrizione campi:
 * **post_id**: id del post
 
 * **user_id**: id dell'utente
@@ -97,11 +97,11 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 
 ### STATISTICHE
 
-### esempio di chiamata alle statistiche, sul campo listed_count
+#### esempio di chiamata alle statistiche, sul campo listed_count
 
 ![Screenshot (152)](https://user-images.githubusercontent.com/95341359/148642032-7fd63aff-3dcb-4350-aade-a32331c2b0c9.png)
 
-
+##### descrizione campi:
 - **Field**: campo in cui vengono effettuate le statistiche (in questo caso listed_count)
 
 - **listed_count**: numero dei post dell'utente
@@ -119,6 +119,8 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
  #### Esempio chiamata statistiche con i filtri
 
 ![Screenshot (156)](https://user-images.githubusercontent.com/95341359/148642009-d6db2140-e3fa-49ea-92f0-cab3a937a816.png)
+
+ ##### descrizione campi:
 - **Field**: campo in cui vengono effettuate le statistiche
 * **sum**: somma
 * **max**: massimo
