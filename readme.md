@@ -1,6 +1,7 @@
 # TWITTER GEO
 
 Di seguito verrà riportato il funzionamento del progetto d'esame denominato "TWITTER - Geo", svolto nel corso di "programmazione ad oggetti" anno 2021/2022.
+
 L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per effettuare statistiche sui dati Geo di Twitter su diverse location.
 
 *********************************************************************************************************************************************************************************
@@ -13,7 +14,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
  	* [Filtri](#FILTRI)
  	* [Statistiche](#STATISTICHE)
 
-
+*********************************************************************************************************************************************************************************
 
 ## DESCRIZIONE GENERALE
 
@@ -33,6 +34,7 @@ Il diagramma riportato qui sotto illustra il funzionamento del progetto, ove l'u
 
 ![immagine_utente_rotte](https://user-images.githubusercontent.com/95341359/148639891-fd9c092a-7dfa-4a73-84f7-d470e5835e99.jpeg)
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### ROTTE
 url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
@@ -62,6 +64,8 @@ url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 * **user_post_mensions**: menzioni fatte nel tweet
 * **postDate**: data in cui è stato fatto il post
 * **screen_name**: nome utente dei profili taggati
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 ### FILTRI 
 I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono forniti, ottengono un valore di dafeult.
@@ -88,6 +92,8 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 * **location**: località in cui è stato fatto il tweet
 * **user_post_mensions**: menzioni fatte nel tweet
 * **postDate**: data in cui è stato fatto il post
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### STATISTICHE
 E' possibile eseguire delle statistiche su un campo. 
