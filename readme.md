@@ -3,6 +3,7 @@
 Di seguito verrà riportato il funzionamento del progetto d'esame denominato "TWITTER - Geo", svolto nel corso di "programmazione ad oggetti" anno 2021/2022.
 
 L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per effettuare statistiche sui dati Geo di Twitter su diverse location.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## indice
 
@@ -96,7 +97,8 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 * **postDate**: data in cui è stato fatto il post
 
 ### STATISTICHE
-
+E' possibile eseguire delle statistiche su un campo. 
+Si può scegliere di effettuare la statistica su tutti i tweet, o ad una parte di essi, apllicando prima un filtro.
 #### esempio di chiamata alle statistiche, sul campo listed_count
 
 ![Screenshot (152)](https://user-images.githubusercontent.com/95341359/148642032-7fd63aff-3dcb-4350-aade-a32331c2b0c9.png)
