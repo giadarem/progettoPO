@@ -29,7 +29,7 @@ L'applicativo permette di:
 
 ## FUNZIONAMENTO DEL PROGETTO
 
-Il diagramma riportato qui sotto, illustra il funzionamento del progetto, ove l'utente, usando le rotte qui descritte, può ottenere la sua risposta in file json.
+Il diagramma riportato qui sotto illustra il funzionamento del progetto, ove l'utente, usando le rotte qui descritte, può ottenere la sua risposta in file json.
 
 ![immagine_utente_rotte](https://user-images.githubusercontent.com/95341359/148639891-fd9c092a-7dfa-4a73-84f7-d470e5835e99.jpeg)
 
@@ -119,6 +119,7 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
  #### Esempio chiamata statistiche con i filtri
 
 ![Screenshot (156)](https://user-images.githubusercontent.com/95341359/148642009-d6db2140-e3fa-49ea-92f0-cab3a937a816.png)
+- **Field**: campo in cui vengono effettuate le statistiche
 * **sum**: somma
 * **max**: massimo
 * **min**: minimo
