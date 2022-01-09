@@ -6,7 +6,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
 
 ## indice
 
-- Descrizione generale
+- [Descrizione generale](#DESCRIZIONE GENERALE)
 - Funzionamento del progetto
 
  	* Rotte
@@ -98,7 +98,7 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 
 ### STATISTICHE
 
-  esempio di chiamata alle statistiche, sul campo listed_count
+### esempio di chiamata alle statistiche, sul campo listed_count
 
 ![Screenshot (152)](https://user-images.githubusercontent.com/95341359/148642032-7fd63aff-3dcb-4350-aade-a32331c2b0c9.png)
 
@@ -117,9 +117,7 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 
 - dev: devianza standar 
 
-  #### Esempio chiamata statistiche con i filtri
-
-  
+ #### Esempio chiamata statistiche con i filtri
 
 ![Screenshot (156)](https://user-images.githubusercontent.com/95341359/148642009-d6db2140-e3fa-49ea-92f0-cab3a937a816.png)
 
