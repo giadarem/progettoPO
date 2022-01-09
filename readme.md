@@ -102,23 +102,26 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 ![Screenshot (152)](https://user-images.githubusercontent.com/95341359/148642032-7fd63aff-3dcb-4350-aade-a32331c2b0c9.png)
 
 
-- Field: campo dove vengono effettuate le statistiche in questo caso listed_count
+- **Field**: campo in cui vengono effettuate le statistiche (in questo caso listed_count)
 
-- listed_count: numero dei post dell'utente
+- **listed_count**: numero dei post dell'utente
 
-- sum: somma dei post degli utenti 
+- **sum**: somma dei post degli utenti 
 
-- max: il numero massimo di post fatti da un solo  account
+- **max**: il numero massimo di post fatti da un solo  account
 
-- min: numero minimo di post fatti da un solo account 
+- **min**: numero minimo di post fatti da un solo account 
 
-- avg: media dei post di tutti gli utenti 
+- **avg**: media dei post di tutti gli utenti 
 
-- dev: devianza standar 
+- **dev**: devianza standar 
 
  #### Esempio chiamata statistiche con i filtri
 
 ![Screenshot (156)](https://user-images.githubusercontent.com/95341359/148642009-d6db2140-e3fa-49ea-92f0-cab3a937a816.png)
-
-
-le statistiche vengono effettuate solo sui post che vengono filtrati.
+* **sum**: somma
+* **max**: massimo
+* **min**: minimo
+* **avg**: media
+* **dev**: deviazione standard
+Nell'esempio sopra riportato, le statistiche vengono effettuate solo sui post precedentemente filtrati.
