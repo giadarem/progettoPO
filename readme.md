@@ -127,7 +127,7 @@ Nell'esempio sopra riportato, le statistiche vengono effettuate solo sui post pr
 *********************************************************************************************************************************************************************************
 
 ## AUTORI
-**Giada Remedia**
+**Giada Remedia** </br>
 **Nicola Picciafuoco**
 
 Studenti del secondo anno di ingegneria informatica e dell'automazione.</br>
