@@ -1,10 +1,9 @@
 # TWITTER GEO
 
 Di seguito verrà riportato il funzionamento del progetto d'esame denominato "TWITTER - Geo", svolto nel corso di "programmazione ad oggetti" anno 2021/2022.
-
 L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per effettuare statistiche sui dati Geo di Twitter su diverse location.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+*********************************************************************************************************************************************************************************
 ## indice
 
 - [Descrizione generale](#DESCRIZIONE-GENERALE)
