@@ -96,7 +96,7 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 
 * **postDate**: data in cui è stato fatto il post
 
-  #### STATISTICS
+### STATISTICHE
 
   esempio di chiamata alle statistiche, sul campo listed_count
 
