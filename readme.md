@@ -7,7 +7,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
 ## indice
 
 - [Descrizione generale](#DESCRIZIONE-GENERALE)
-- [Funzionamento del progetto](FUNZIONAMENTO-DEL-PROGETTO)
+- [Funzionamento del progetto](#FUNZIONAMENTO-DEL-PROGETTO)
 
  	* [Rotte](#ROTTE)
  	* [Filtri](#FILTRI)
