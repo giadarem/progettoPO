@@ -13,7 +13,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
  	* [Rotte](#ROTTE)
  	* [Filtri](#FILTRI)
  	* [Statistiche](#STATISTICHE)
-
+- [Autori](#AUTORI)
 *********************************************************************************************************************************************************************************
 
 ## DESCRIZIONE GENERALE
@@ -123,3 +123,13 @@ Si può scegliere di effettuare la statistica su tutti i tweet, o ad una parte d
 * **avg**: media
 * **dev**: deviazione standard
 Nell'esempio sopra riportato, le statistiche vengono effettuate solo sui post precedentemente filtrati.
+
+*********************************************************************************************************************************************************************************
+
+##AUTORI
+**Giada Remedia**
+**Nicola Picciafuoco**
+
+Studenti del secondo anno di ingegneria informatica e dell'automazione.
+Il progetto è stato svolto in completa collaborazione.
+
