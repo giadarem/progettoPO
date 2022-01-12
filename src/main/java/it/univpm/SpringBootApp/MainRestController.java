@@ -45,13 +45,6 @@ public class MainRestController {
     private static final Logger LOGGER = LoggerFactory.getLogger(MainRestController.class);
 
     public MainRestController(){ LOGGER.info("*** APPLICATION - START ***"); }
-
-    /* RICHIESTA PARAMETRI - /get-tweets
-        location -> Milano, Napoli, Ancona - Default: Milano
-        result_type -> recent, mixed, popular - Default: recent
-        count -> (Int) > 0 & < 100 - Default: 20
-        lang -> it, fr, en, es - Default: it
-    */
     
     /** richiede dei parametri (non obbligatori)
      * 
@@ -59,7 +52,7 @@ public class MainRestController {
      * @param type, rappresenta la tipologia dei post (recente, popolare, entrambi)
      * @param count, rappresenta il numero di tweet che avremo come risposta in json
      * @param lang, rappresenta la lingua dei tweet che avremo come risposta in json
-     * @return Tweets che soddisfano le richieste passate tramite URL
+     * @return invocazione meteodo action(<>) con i parametri passati al metodo getJSONResponseFromAPI(<>)
      * @throws IOException
      * @throws ParseException
      */
@@ -85,8 +78,8 @@ public class MainRestController {
         }
     }
     /**
-     * 
-     * @return Elenco degli attributi utilizzati per ogni Tweet
+     * @return invocazione del metodo getAll() della classe ArrayListAttribute, 
+            composizione del JSON per ogni attributo presente nell'ArrayListAttribute
      */
 
     @GetMapping("/get-attributes")
@@ -97,11 +90,6 @@ public class MainRestController {
         return new ResponseEntity<String>(new ServiceRetrieve().getAttributesList(), HttpStatus.OK);
     }
 
-    /* RICHIESTA PARAMETRI - /filters
-        filter -> search, lower, upper, included - Default: lower
-        field -> (search) hashtags, mentions, username | (lower,upper,included) post_num - Default: post_num
-        value -> (String) in caso di ricerca | (Int) > 0 - Default: 20 [Included option - 20-40 / Occorre passare Min e Max range]
-    */
     /**
      * richiede dei parametri (non obbligatori) per poterci effettuare dei filtri
      * recuperando un'array di Tweet dopo 
@@ -111,7 +99,7 @@ public class MainRestController {
      * @param filter, rappresenta il filtro che si può applicare
      * @param field, rappresenta il campo in cui applicare il filtro
      * @param value, rappresenta il numero di Tweet da ritornare
-     * @return un errore in caso di richiesta non valida
+     * @return ArrayListTweetPost contenente tutti i tweet che rispettino le condizioni del filtro
      * @throws IOException
      * @throws ParseException
      */
@@ -140,13 +128,6 @@ public class MainRestController {
         }
     }
 
-    /* RICHIESTA PARAMETRI - /statistics
-        stats_field -> created_at, listed_count
-        filter -> search, lower, upper, included - Default: lower
-        field -> (search) hashtags, mentions, username | (lower,upper,included) post_num - Default: post_num
-        value -> (String) in caso di ricerca | (Int) > 0 - Default: 20 [Included option - 20-40 / Occorre passare Min e Max range]
-    */
-    
     /**
      * richiede dei parametri (non obbligatori) per effettuarci delle statistiche
      * 
@@ -154,7 +135,8 @@ public class MainRestController {
      * @param filter, rappresenta il filtro che si può applicare
      * @param field, rappresenta il campo in cui applicare il filtro
      * @param value, rappresenta il numero di Tweet da ritornare
-     * @return un errore in caso di richiesta non valida
+     * @return  Invocazione del metodo getValues(<>) della classe FreqStatistic 
+     * fornendo l'arraylist dei tweet della classe ServiceStatistics
      * @throws IOException
      * @throws ParseException
      */
