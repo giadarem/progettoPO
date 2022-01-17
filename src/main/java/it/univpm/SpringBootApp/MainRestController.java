@@ -32,13 +32,6 @@ import java.lang.String;
    NB: I parametri sono opzionali, possono essere omessi o parziali - hanno un valore di default
 */
 
-/** RestController contiene tutte le richieste che si possono fare al server
- * 
- * @author Giada Remedia
- * @author Nicola Picciafuoco
- *
- */
-
 @RestController
 @RequestMapping(value = "/api", method = RequestMethod.GET, produces = "application/json")
 public class MainRestController {
@@ -53,7 +46,7 @@ public class MainRestController {
         lang -> it, fr, en, es - Default: it
     */
     
-    /** richiede dei parametri (non obbligatori)
+    /** richiede dei parametri non obbligatori in quanto se non forniti immette quelli di default
      * 
      * @param location, rappresenta la posizione geografica da cui viene fatto il tweet
      * @param type, rappresenta la tipologia dei post (recente, popolare, entrambi)
@@ -84,11 +77,12 @@ public class MainRestController {
             return new ResponseEntity<String>("{\"Error\":\"Error 400 - BAD REQUEST / Invalid location [INSERT Milano OR Ancona OR Napoli IN location VALUE]\"}", HttpStatus.BAD_REQUEST);
         }
     }
-    /**
-     * 
-     * @return Elenco degli attributi utilizzati per ogni Tweet
-     */
 
+    /**
+     * composizione del json contenente tutti i metadati presenti per ogni tweet
+     * @return invocazione del metodo getAll() della classe ArrayListAttribute, 
+            composizione del JSON per ogni attributo presente nell'ArrayListAttribute
+     */
     @GetMapping("/get-attributes")
     public ResponseEntity attribute()
     {
@@ -102,16 +96,17 @@ public class MainRestController {
         field -> (search) hashtags, mentions, username | (lower,upper,included) post_num - Default: post_num
         value -> (String) in caso di ricerca | (Int) > 0 - Default: 20 [Included option - 20-40 / Occorre passare Min e Max range]
     */
+    
     /**
-     * richiede dei parametri (non obbligatori) per poterci effettuare dei filtri
-     * recuperando un'array di Tweet dopo 
-     * l'applicazione dei filtri e restituendo la risposta in formato Json
+     * richiede dei parametri non obbligatori per poterci effettuare dei filtri
+     * recuperando un'array di Tweet dopo l'applicazione dei filtri 
+     * e restituendo la risposta in formato Json
      * 
      * @param stats_field, created_at, listed_count
      * @param filter, rappresenta il filtro che si può applicare
      * @param field, rappresenta il campo in cui applicare il filtro
      * @param value, rappresenta il numero di Tweet da ritornare
-     * @return un errore in caso di richiesta non valida
+     * @return ArrayListTweetPost contenente tutti i tweet che rispettino le condizioni del filtro
      * @throws IOException
      * @throws ParseException
      */
@@ -126,7 +121,7 @@ public class MainRestController {
 
         //AraayList di risposta
         ArrayListTweetPost response = new ServiceFilters().filters(filter, field, value);
-        //Caso in cui il filtro passato è errato
+        //Caso in cui il filtro passato Ã¨ errato
         if (response == null) {
             LOGGER.error("*** Error 400 - BAD REQUEST / Invalid filter [INSERT search OR lower OR upper OR included IN filter VALUE] ***");
             return new ResponseEntity<String>("{\"Error\":\"Error 400 - BAD REQUEST / Invalid filter [INSERT search OR lower OR upper OR included IN filter Value]\"}", HttpStatus.BAD_REQUEST);
@@ -148,13 +143,14 @@ public class MainRestController {
     */
     
     /**
-     * richiede dei parametri (non obbligatori) per effettuarci delle statistiche
+     * richiede dei parametri non obbligatori per effettuarci delle statistiche
      * 
      * @param stats_field, created_at, listed_count
      * @param filter, rappresenta il filtro che si può applicare
      * @param field, rappresenta il campo in cui applicare il filtro
      * @param value, rappresenta il numero di Tweet da ritornare
-     * @return un errore in caso di richiesta non valida
+     * @return  Invocazione del metodo getValues(<>) della classe FreqStatistic 
+     * +fornendo l'arraylist dei tweet della classe ServiceStatistics
      * @throws IOException
      * @throws ParseException
      */
@@ -175,19 +171,19 @@ public class MainRestController {
                 tp = (ArrayListTweetPost) filters(filter, field, value).getBody();
                 //Recupero le statistiche sull'ArrayList filtrato
                 str = new ServiceStatistics(tp).statistics(stats_field);
-                //Se il ritorno è vuoto - Campo delle statistiche sbagliato
+                //Se il ritorno Ã¨ vuoto - Campo delle statistiche sbagliato
                 if(str.isEmpty()){
                     LOGGER.error("*** Error 400 - BAD REQUEST / Invalid Statistics Field [INSERT created_at OR listed_count IN stats_field VALUE] ***");
                     return new ResponseEntity<String>("{\"Error\":\"Error 400 - BAD REQUEST / Invalid Statistics Field [INSERT created_at OR listed_count IN stats_field VALUE]\"}", HttpStatus.BAD_REQUEST);
-                //Se l'ArrayList è null - Filtri non corretti
+                //Se l'ArrayList Ã¨ null - Filtri non corretti
                 } else if(tp == null){
                     LOGGER.error("*** Error 400 - BAD REQUEST / Invalid filter [INSERT search OR lower OR upper OR included IN filter VALUE] ***");
                     return new ResponseEntity<String>("{\"Error\":\"Error 400 - BAD REQUEST / Invalid filter [INSERT search OR lower OR upper OR included IN filter Value]\"}", HttpStatus.BAD_REQUEST);
-                //Se l'ArrayList è vuoto - Non sono disponibili risultati per i filtri selezionati
+                //Se l'ArrayList Ã¨ vuoto - Non sono disponibili risultati per i filtri selezionati
                 } else if (tp.getAllTweets().size() == 0) {
                     LOGGER.error("*** Error 400 - BAD REQUEST / No record found [INSERT hashtags OR mentions OR username OR post_num IN field VALUE] ***");
                     return new ResponseEntity<String>("{\"Error\":\"Error 400 - BAD REQUEST / No record found [INSERT hashtags OR mentions OR username OR post_num IN field VALUE]\"}", HttpStatus.BAD_REQUEST);
-                //Se tutto è corretto - visualizzo le statistiche
+                //Se tutto Ã¨ corretto - visualizzo le statistiche
                 } else {
                     return new ResponseEntity<String>(str, HttpStatus.OK);
                 }
@@ -199,10 +195,10 @@ public class MainRestController {
         } else {
             //Recupero le statistiche sull'ArrayList base
             str = new ServiceStatistics().statistics(stats_field);
-            //Se il ritorno è valorizzato visualizzo i risutati
+            //Se il ritorno Ã¨ valorizzato visualizzo i risutati
             if (!str.isEmpty()) {
                 return new ResponseEntity<String>(str, HttpStatus.OK);
-            //Se il ritorno è vuoto - Campo statistiche errato
+            //Se il ritorno Ã¨ vuoto - Campo statistiche errato
             } else {
                 LOGGER.error("*** Error 400 - BAD REQUEST / Invalid Statistics Field [INSERT created_at OR listed_count IN stats_field VALUE] ***");
                 return new ResponseEntity<String>("{\"Error\":\"Error 400 - BAD REQUEST / Invalid Statistics Field [INSERT created_at OR listed_count IN stats_field VALUE]\"}", HttpStatus.BAD_REQUEST);
