@@ -13,6 +13,7 @@ L'obiettivo di tale progetto è quello di sviluppare un'applicazione Java per ef
  	* [Rotte](#ROTTE)
  	* [Filtri](#FILTRI)
  	* [Statistiche](#STATISTICHE)
+ - [Test](#TEST)
 - [Autori](#AUTORI)
 *********************************************************************************************************************************************************************************
 
@@ -126,6 +127,12 @@ Nell'esempio sopra riportato, le statistiche vengono effettuate solo sui post pr
 
 *********************************************************************************************************************************************************************************
 
+### TEST
+Dopo la fase di progettazione e sviluppo del progetto è stata creato un test apposito, utilizzando JUnit5, per verificare la correttezza di alcuni metodi:
+* **TestStatistic**: Controlla il risultato delle funzioni che calcolano le statistiche
+
+*********************************************************************************************************************************************************************************
+	
 ## AUTORI
 **Giada Remedia** </br>
 **Nicola Picciafuoco**
