@@ -37,12 +37,12 @@ public class SearchFilter extends AbstractFilter{
                 for(int i = 0; i < str_hashtags.length; i++)
                 {
                     //Se il valore da ricercare è contenuto nell'elemento fornito esco con true
-                    if(str_hashtags[i].contains(this.getSearch_value())){ check = true; }
+                    if(str_hashtags[i].contains(this.getSearch_value()) || str_hashtags[i].equals(this.getSearch_value())){ check = true; }
                 }
                 break;
             case "username":
                 //Se il valore da ricercare è contenuto nell'elemento fornito esco con true
-                if(elem.getUser_name().contains(this.getSearch_value()))
+                if(elem.getUser_name().contains(this.getSearch_value()) ||  elem.getUser_name().equals(this.getSearch_value()))
                     check = true;
                 break;
             case "mentions":
@@ -50,7 +50,7 @@ public class SearchFilter extends AbstractFilter{
                 for(int i = 0; i < str.length; i++)
                 {
                     //Se il valore da ricercare è contenuto nell'elemento fornito esco con true
-                    if(str[i].contains(this.getSearch_value())){ check = true; }
+                    if(str[i].contains(this.getSearch_value()) || str[i].equals(this.getSearch_value())){ check = true; }
                 }
                 break;
         }
