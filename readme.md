@@ -46,7 +46,7 @@ url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 | /api/get-tweets/api/get-tweets?location=<value>&result_type=<value>&count=<value>&lang=<value> | chiamata specifica in cui vengono visualizzati i Tweet (Ancona/Milano/Napoli) | /api/get-tweets?location=<Ancona>&result_type=<recent>&count=<50>&lang=<it> |
 | /api/get-attributes                                          | visualizza i metadati e la loro descrizione                  | /api/get-attributes                                          |
 | /api/filters                                                 | chiamata generale che visualizza i tweet con i filtri impostati di default (lower, post_num, 20 ). | /api/filters                                                 |
-| /api/filters?filter=<value>&field=<value>&value=<value>      | visualizza i tweet con gli attribuiti specificati dall'utente. | /api/filters?filter=<search>&field=<username>&value=<Spring> |
+| /api/filters?filter=<value>&field=<value>&value=<valure>     | visualizza i tweet con gli attribuiti specificati dall'utente. | /api/filters?filter=search&field=username&value=Spring       |
 | /api/statistics                                              | visualizza le statistiche sulla frequenza dei post           | /api/statistics                                              |
 | /api/statistics?stats_field=<value>                          | visualizza le statistiche su determinati campi               | /api/statistics?stats_field=<list_count>                     |
 | /api/statistics?stats_field=<value>&filter=<value>&field=<value>&value=<value> | Visualizza le statistiche su un campo dei Tweet, applicando prima un filtro | /api/statistics?stats_field=listed_count&filt<br />er=lower&field=post_num&value=50 |
@@ -67,7 +67,7 @@ url http://localhost:8080. I dati che vengono restituiti sono in formato Json.
 * **screen_name**: nome utente dei profili taggati
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
+
 ### FILTRI 
 I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono forniti, ottengono un valore di dafeult.
 
@@ -132,7 +132,7 @@ Dopo la fase di progettazione e sviluppo del progetto è stata creato un test ap
 * **TestStatistic**: Controlla il risultato delle funzioni che calcolano le statistiche
 
 *********************************************************************************************************************************************************************************
-	
+
 ## AUTORI
 **Giada Remedia** </br>
 **Nicola Picciafuoco**
