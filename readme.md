@@ -99,6 +99,7 @@ I filtri richiedono dei parametri, non obbligatori, in quanto, se non vengono fo
 ### STATISTICHE
 E' possibile eseguire delle statistiche su un campo. 
 Si può scegliere di effettuare la statistica su tutti i tweet, o ad una parte di essi, apllicando prima un filtro.
+
 #### esempio di chiamata alle statistiche, sul campo listed_count
 
 ![Screenshot (152)](https://user-images.githubusercontent.com/95341359/148642032-7fd63aff-3dcb-4350-aade-a32331c2b0c9.png)
@@ -128,7 +129,7 @@ Nell'esempio sopra riportato, le statistiche vengono effettuate solo sui post pr
 *********************************************************************************************************************************************************************************
 
 ### TEST
-Dopo la fase di progettazione e sviluppo del progetto è stata creato un test apposito, utilizzando JUnit5, per verificare la correttezza di alcuni metodi:
+Dopo la fase di progettazione e sviluppo del progetto sono state create un test apposito, utilizzando JUnit5, per verificare la correttezza di alcuni metodi:
 * **TestStatistic**: Controlla il risultato delle funzioni che calcolano le statistiche
 * **TestRequest**: Controlla che il codice Http generato sia corretto.
 
