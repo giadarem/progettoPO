@@ -7,7 +7,7 @@ import java.io.IOException;
 //CLASSE ESTESA DA AvgStatistic, DevStatistic, FreqStatistic, MaxStatistic, MinStatistic, SumStatistic
 
 /**
- * classe astratta utilizzata per i filtri
+ * interfaccia utilizzata per i filtri
  */
 public interface AbstractStatistic {
    // public AbstractStatistic(){}
