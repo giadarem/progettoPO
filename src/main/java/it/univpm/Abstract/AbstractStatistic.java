@@ -9,8 +9,8 @@ import java.io.IOException;
 /**
  * classe astratta utilizzata per i filtri
  */
-public abstract class AbstractStatistic {
-    public AbstractStatistic(){}
+public interface AbstractStatistic {
+   // public AbstractStatistic(){}
 
     //METODI ASTRATTI - DA IMPLEMENTARE NELLE CLASSI ESTESE
     /**
