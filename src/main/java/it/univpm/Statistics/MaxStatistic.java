@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * calcola il numero massimo di post presenti nei Tweet visualizzati
  *
  */
-public class MaxStatistic extends AbstractStatistic {
+public class MaxStatistic implements AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(MaxStatistic.class);
 
     public MaxStatistic(){super();}

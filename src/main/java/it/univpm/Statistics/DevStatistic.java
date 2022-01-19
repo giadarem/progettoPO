@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * calcola la deviazione standard
  *
  */
-public class DevStatistic extends AbstractStatistic {
+public class DevStatistic implements AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(DevStatistic.class);
 
     public DevStatistic(){super();}

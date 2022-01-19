@@ -12,7 +12,7 @@ import java.io.IOException;
  * calcola la media
  *
  */
-public class AvgStatistic extends AbstractStatistic {
+public class AvgStatistic implements AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(AvgStatistic.class);
 
     public AvgStatistic(){super();}

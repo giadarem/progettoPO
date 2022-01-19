@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * calcola la somma di post presenti nei Tweet visualizzati
  *
  */
-public class SumStatistic extends AbstractStatistic {
+public class SumStatistic implements AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(SumStatistic.class);
 
     public SumStatistic(){super();}

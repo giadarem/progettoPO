@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * calcola il numero minimo di post presenti nei Tweet visualizzati
  *
  */
-public class MinStatistic extends AbstractStatistic {
+public class MinStatistic implements AbstractStatistic {
     private static final Logger LOGGER = LoggerFactory.getLogger(MinStatistic.class);
 
     public MinStatistic(){super();}
