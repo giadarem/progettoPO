@@ -129,7 +129,7 @@ Nell'esempio sopra riportato, le statistiche vengono effettuate solo sui post pr
 *********************************************************************************************************************************************************************************
 
 ### TEST
-Dopo la fase di progettazione e sviluppo del progetto sono state create un test apposito, utilizzando JUnit5, per verificare la correttezza di alcuni metodi:
+Dopo la fase di progettazione e sviluppo del progetto sono state create due classi test apposite, utilizzando JUnit5, per verificare la correttezza di alcuni metodi:
 * **TestStatistic**: Controlla il risultato delle funzioni che calcolano le statistiche
 * **TestRequest**: Controlla che il codice Http generato sia corretto.
 
